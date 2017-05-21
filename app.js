@@ -7,8 +7,14 @@ $(function() {
   ];
 
   var $canvas = $('.canvas');
-
+  var $audio = $('audio');
   var counter = 0;
+
+  $('.play').on('click', function() {
+    if ($audio[0].paused) {
+      $audio.trigger('play');
+    }
+  });
 
   setInterval(function() {
     $canvas.fadeOut('slow', function() {
